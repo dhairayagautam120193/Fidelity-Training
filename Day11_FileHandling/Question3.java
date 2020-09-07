@@ -1,23 +1,21 @@
 package fileHandling;
 
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 
 public class Question3 {
 
 	
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 		
-		File file = new File("Data1.txt");
+		BufferedReader rd= new BufferedReader(new InputStreamReader(System.in));
 		
-		if(file.exists()){
-			
-			System.out.println("File exists");
-		}
-		else{
-			
-			System.out.println("File doesnot exists, hence creating a new file");
-			
-			file.createNewFile();
-		}
+		System.out.print("Enter your full name..");
+		
+		String fullName= rd.readLine();
+		
+		System.out.println(fullName);
+		
 	}
 }
